@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    
+}
+
+body{
+    background: rgba(48, 48, 48, 0.5);
+    background: url(../img/fondo2.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+
+.contenedor{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
+}
+
+.contenedor .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+
+.contenedor .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.header{
+    background: #1c1c1c;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+}
+
+.cabecera_h1{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-family: 'Fredoka One', cursive;
+    top: 20px;
+    left: 125px;
+}
+
+.cabecera_frase{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-family: 'Fredoka One', cursive;
+    top: 55px;
+    left: 145px
+}
+
+.ocultar{
+    display: none;
+}
+
+.nav{
+    float: right;
+    line-height: 100px;
+    margin: 20px;
+}
+
+.nav_link_1{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+.nav_link_2{
+    display: inline-block;
+	padding: 15px;
+	line-height: normal;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+.nav_link_3{
+    display: inline-block;
+	padding: 15px;
+	line-height: normal;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+.nav a:hover{
+    background:#FF9F29;
+    color: black;
+    border-radius: 100px;
+}
+
+/*-----------------------------------------/Registro y login/--------------------------------------------------------*/
+
+.Ventana_Registro{
+    background: rgba(48, 48, 48, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.pop-wrap{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 950px;
+    transform: scale(0.6);
+    opacity: 0;
+}
+
+.pop-up-title{
+    flex-basis: 0;
+    flex-grow:1.5;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../img/fondo_Registro.jpg');
+    background-size: 165%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pop-up-title::after{
+    content: '';
+    position: absolute;
+    background: #ff9f2970;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pop-up-title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.Registro::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.pop-up-title h2,
+.pop-up-title p{
+    z-index: 10;
+    color: black;
+}
+
+.pop-up-title h2{
+    font-family: 'Chiller';
+    font-size: 80px;
+}
+
+.pop-up-title p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.Registro{
+    background: #fff;
+    flex-basis: 0;
+    flex-grow: 2;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.sub-content{
+    width: 75%;
+}
+
+.sub-content h2{
+    font-weight: 500;
+    font-size: 40px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.sub-content p{
+    font-weight: 500;
+    color: black;
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 85%;
+    padding: 10px;
+    border: none;
+}
+
+.button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: black;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: .25s ease background;
+}
+
+.button:hover{
+    background: #FF9F29;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+
+.line{
+    width: 100%;
+    height: 20px;
+    background: #FF9F29;
+}
+
+.Ventana_Registro.show{
+    visibility: visible;
+}
+
+.pop-wrap.show{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#close{
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+}
+
+.Ventana_Login{
+    background: rgba(48, 48, 48, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    visibility: hidden;
+}
+
+.Login{
+    background: #fff;
+    flex-basis: 0;
+    flex-grow: 2;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.Login::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.n_contenido{
+    width: 75%;
+}
+
+.n_contenido h2{
+    font-weight: 500;
+    font-size: 40px;
+    color: #1F4068;
+    margin-bottom: 15px;
+}
+
+.n_contenido p{
+    font-weight: 500;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.Ventana_Login.show{
+    visibility: visible;
+}
+
+.link{
+    text-decoration: none;
+    color: midnightblue;
+}
+
+.link_1{
+    text-decoration: none;
+    color: midnightblue;
+}
+
+#cerrar{
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    font-size: 25px;
+    color: red;
+    cursor: pointer; 
+}
+
+@media only screen and (max-width: 980px){
+    .pop-up-title{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 320px){
+    .sub-content h2{
+        font-size: 30px;
+    }
+}
+
+/*--------------------------------------/boton emergente/---------------------------------------*/
+
+.container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;  
+}
+
+.redes a, .btn-mas{
+    display: block; 
+    text-decoration: none;
+    background: #FF9F29;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+
+.redes a:hover{
+    background: rgb(0, 0, 0);
+    color: #FF9F29;   
+}
+
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility:hidden; 
+}
+
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;  
+}
+
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;   
+}
+
+.fa-regularfa-comment-captions{
+    cursor: pointer;
+    background: #FF9F29;
+    font-size: 23px;
+}
+
+.fa-solid, .fas {
+    cursor: pointer;
+}
+
+#btn-mas:checked~ .btn-mas{
+    transform: rotate(137deg);
+    font-size: 25px;
+}
+
+/*---------------------------------------------/Menu lateral/----------------------------------------------------*/
+
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #FF9F29;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    font-family: 'Fredoka One', cursive;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    color: #FF9F29;
+    border-left: 5px solid #FF9F29;
+    background: black;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.container-menu.show{
+    visibility: hidden;
+}
+
+/*-------------------------------------//--------------------------------------*/
+.header_2{
+    position: absolute;
+    bottom: 30%;
+    padding: 0 50px;
+}
+
+.header_2 h1{
+    font-size: 7rem;
+}
+
+.header_2 h2{
+    font-size: 4rem;
+}
+
+.header_2 p{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header_2 button{
+    padding: 0 5px;
+    width: 140px;
+    height: 40px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    background-color: #ff4321;
+    border-radius: 25px;
+    transition: width 0.5s;
+}
+   
+button img{
+    display: none;
+}
+
+button:hover img{
+    display: block;
+}
+
+header button:hover{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.Fondo_Inicio{
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+   
+.icons{
+    position: absolute;
+    bottom: 8%;
+    padding: 0 50px;
+}
+
+.icons i{
+    font-size: 2.5rem;
+    padding: 0 10px;
+    cursor: pointer;
+}
+   
+.icons i:hover{
+    color: #ff4321;
+    transition: all 0.3s ease 0s;
+}
+
+.piePagina{
+    background: #1c1c1c;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.piePagina footer{
+    text-align: center;
+    color: white;
+}
+
+.Pantalla_Inicio.show{
+    visibility: visible;
+}
+
+
